@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Phone Hunter</title>
+</head>
+
+<body>
+    <header>
+        <h1 class="text-6xl font-semibold font-serif text-center my-12">Phone Hunter</h1>
+    </header>
+    <main class="container mx-auto">
+
+        <section class="bg-teal-200 p-4 rounded-xl my-6 text-center">
+            <input id="inputField" type="text" placeholder="Search here" class="input" />
+            <button onclick="searchButton()" class="btn btn-accent">Search</button>
+
+        </section>
+        <section id="loadingScreen" class="text-center my-6 hidden">
+            <span class="loading loading-spinner text-accent"></span>
+
+        </section>
+        <section id="display-phone-sec" class="grid grid-cols-3    md:grid-cols-2 lg:grid-cols-3 gap-5 rounded-xl">
+
+        </section>
+
+        <section id="showMoreSec" class="text-center mt-5 hidden ">
+            <button onclick="nxtBtn()" class="btn btn-accent ">Show More...</button>
+
+        </section>
+
+        <section>
+            <!-- Open the modal using ID.showModal() method -->
+            <!-- <button class="btn" onclick="my_modal_5.showModal()">open modal</button> -->
+            <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+                <div class="modal-box">
+                    <div id="modal" >
+
+                    </div>
+                    
+                    <div class="modal-action">
+                        <form method="dialog">
+                            <!-- if there is a button in form, it will close the modal -->
+                            <button class="btn">Close</button>
+                        </form>
+                    </div>
+                </div>
+            </dialog>
+        </section>
+    </main>
+
+
+
+    <script src="hunter.js"></script>
+</body>
+
+</html>
